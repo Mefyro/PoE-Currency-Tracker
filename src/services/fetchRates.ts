@@ -7,7 +7,6 @@ export async function fetchCurrencyRates(
   league: string
 ): Promise<CurrencyRatesResponse | null> {
   const url = `${BASE_URL}?league=${encodeURIComponent(league)}&type=Currency`;
-
   try {
     const response = await axios.get<CurrencyRatesResponse>(url);
 
